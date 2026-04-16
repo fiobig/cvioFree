@@ -22,10 +22,10 @@ Future<void> _markConsentComplete() async {
 const _tosText = '''Termini di Servizio
 Ultimo aggiornamento: 16 aprile 2026
 
-I presenti Termini di Servizio ("Termini") regolano l'utilizzo dell'applicazione Cvio ("l'App"), sviluppata e gestita da Fiorenzo ("noi", "ci"). Utilizzando l'App, l'utente accetta i presenti Termini.
+I presenti Termini di Servizio ("Termini") regolano l'utilizzo dell'applicazione Cvío ("l'App"), sviluppata e gestita da Fiorenzo ("noi", "ci"). Utilizzando l'App, l'utente accetta i presenti Termini.
 
 1. Descrizione del servizio
-Cvio e un'applicazione gratuita che consente di creare curriculum vitae professionali in formato PDF. L'App offre diversi template, la possibilita di compilare il CV in piu sezioni e una funzione di traduzione automatica.
+Cvío e un'applicazione gratuita che consente di creare curriculum vitae professionali in formato PDF. L'App offre diversi template, la possibilita di compilare il CV in piu sezioni e una funzione di traduzione automatica.
 
 2. Utilizzo dell'App
 L'utente si impegna a:
@@ -63,7 +63,7 @@ Per domande relative ai presenti Termini, contattare: fiorenzo9845@gmail.com''';
 const _privacyText = '''Informativa sulla Privacy
 Ultimo aggiornamento: 16 aprile 2026
 
-La presente informativa descrive come l'applicazione Cvio ("l'App") tratta i dati dell'utente. L'App e sviluppata e gestita da Fiorenzo ("noi", "ci").
+La presente informativa descrive come l'applicazione Cvío ("l'App") tratta i dati dell'utente. L'App e sviluppata e gestita da Fiorenzo ("noi", "ci").
 
 1. Dati raccolti
 L'App consente di creare un curriculum vitae (CV) inserendo dati personali e professionali quali nome, cognome, email, telefono, indirizzo, esperienze lavorative, istruzione, competenze e altri campi del CV.

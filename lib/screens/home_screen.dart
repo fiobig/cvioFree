@@ -31,37 +31,95 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   Widget build(BuildContext context) {
     final l = ref.watch(appLocalizationsProvider);
     final cv = ref.watch(cvProvider);
+    final primary = Theme.of(context).colorScheme.primary;
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(l.t('appTitle')),
-        actions: [
-          PopupMenuButton<Language>(
-            icon: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                const Icon(Icons.translate, size: 18),
-                const SizedBox(width: 4),
-                Text(cv.currentLanguage.flag, style: const TextStyle(fontSize: 18)),
-              ],
+        titleSpacing: 12,
+        title: Row(
+          children: [
+            Container(
+              width: 34,
+              height: 34,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                boxShadow: [
+                  BoxShadow(
+                    color: primary.withValues(alpha: 0.25),
+                    blurRadius: 8,
+                    offset: const Offset(0, 2),
+                  ),
+                ],
+              ),
+              child: ClipOval(
+                child: Image.asset(
+                  'assets/icons/icon_cvio.png',
+                  fit: BoxFit.cover,
+                ),
+              ),
             ),
-            tooltip: 'CV Language',
-            onSelected: ref.read(cvProvider.notifier).setLanguage,
-            itemBuilder: (_) => Language.values.map((lang) {
-              return PopupMenuItem(
-                value: lang,
+            const SizedBox(width: 10),
+            Text(
+              l.t('appTitle'),
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.w700,
+                letterSpacing: -0.5,
+                color: primary,
+              ),
+            ),
+          ],
+        ),
+        actions: [
+          // Language chip
+          Padding(
+            padding: const EdgeInsets.only(right: 4),
+            child: PopupMenuButton<Language>(
+              offset: const Offset(0, 48),
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+              onSelected: ref.read(cvProvider.notifier).setLanguage,
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                decoration: BoxDecoration(
+                  color: primary.withValues(alpha: 0.08),
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: primary.withValues(alpha: 0.15)),
+                ),
                 child: Row(
+                  mainAxisSize: MainAxisSize.min,
                   children: [
-                    if (cv.currentLanguage == lang) const Icon(Icons.check, size: 16),
-                    if (cv.currentLanguage != lang) const SizedBox(width: 16),
-                    const SizedBox(width: 8),
-                    Text(lang.flag, style: const TextStyle(fontSize: 18)),
-                    const SizedBox(width: 8),
-                    Text(lang.label),
+                    Icon(Icons.translate, size: 16, color: primary),
+                    const SizedBox(width: 5),
+                    Text(
+                      cv.currentLanguage.flag,
+                      style: const TextStyle(fontSize: 16),
+                    ),
                   ],
                 ),
-              );
-            }).toList(),
+              ),
+              itemBuilder: (_) => Language.values.map((lang) {
+                final selected = cv.currentLanguage == lang;
+                return PopupMenuItem(
+                  value: lang,
+                  child: Row(
+                    children: [
+                      Text(lang.flag, style: const TextStyle(fontSize: 18)),
+                      const SizedBox(width: 10),
+                      Expanded(
+                        child: Text(
+                          lang.label,
+                          style: TextStyle(
+                            fontWeight: selected ? FontWeight.w600 : FontWeight.normal,
+                            color: selected ? primary : null,
+                          ),
+                        ),
+                      ),
+                      if (selected) Icon(Icons.check_circle, size: 18, color: primary),
+                    ],
+                  ),
+                );
+              }).toList(),
+            ),
           ),
           IconButton(
             icon: const Icon(Icons.settings_outlined),
