@@ -1,0 +1,96 @@
+name: cv_mobile_app
+description: "CV Builder mobile app"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.0-320.0.dev
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # State management
+  flutter_riverpod: ^2.6.1
+
+  # Models code generation
+  freezed_annotation: ^2.4.4
+  json_annotation: ^4.9.0
+
+  # PDF generation
+  pdf: ^3.11.3
+  printing: ^5.14.2
+
+  # ZIP bundling
+  archive: ^3.6.1
+
+  # File sharing
+  share_plus: ^13.0.0
+
+  # Photo picker
+  image_picker: ^1.1.2
+
+  # Persistence
+  hive_ce: ^2.9.0
+  hive_ce_flutter: ^2.3.4
+
+  # HTTP (translation API)
+  http: ^1.3.0
+
+  # Auth — HTTP client with cookie management
+  dio: ^5.8.0+1
+  cookie_jar: ^4.0.8
+  dio_cookie_manager: ^3.1.1
+  flutter_secure_storage: ^8.1.0
+
+  # Google Sign-In
+  google_sign_in: ^6.2.2
+
+  # UUID generation
+  uuid: ^4.5.1
+
+  # Fonts
+  google_fonts: ^6.2.1
+
+  # File handling
+  path_provider: ^2.1.5
+  open_filex: ^4.7.0
+  file_saver: ^0.2.14
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+  # Code generation
+  build_runner: ^2.4.14
+  freezed: ^2.5.8
+  json_serializable: ^6.9.4
+
+  # App icon generation
+  flutter_launcher_icons: ^0.14.3
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/icon_Cvío.png"
+  min_sdk_android: 21
+  web:
+    generate: false
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/fonts/
+    - assets/icons/
+
+  fonts:
+    - family: NotoSans
+      fonts:
+        - asset: assets/fonts/NotoSans-Regular.ttf
+        - asset: assets/fonts/NotoSans-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/NotoSans-Italic.ttf
+          style: italic
