@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'screens/home_screen.dart';
 import 'screens/onboarding_screen.dart';
+import 'screens/consent_screen.dart';
 
 class CvBuilderApp extends ConsumerWidget {
   const CvBuilderApp({super.key});
@@ -40,27 +41,27 @@ class _EntryPoint extends StatefulWidget {
 }
 
 class _EntryPointState extends State<_EntryPoint> {
-  late Future<bool> _onboardingDone;
+  late Future<(bool, bool)> _checks;
 
   @override
   void initState() {
     super.initState();
-    _onboardingDone = isOnboardingComplete();
+    _checks = Future.wait([
+      isOnboardingComplete(),
+      isConsentComplete(),
+    ]).then((r) => (r[0], r[1]));
   }
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<bool>(
-      future: _onboardingDone,
+    return FutureBuilder<(bool, bool)>(
+      future: _checks,
       builder: (context, snapshot) {
-        if (!snapshot.hasData) {
-          // Splash while loading
-          return const _SplashView();
-        }
-        if (snapshot.data!) {
-          return const HomeScreen();
-        }
-        return const OnboardingScreen();
+        if (!snapshot.hasData) return const _SplashView();
+        final (onboarded, consented) = snapshot.data!;
+        if (!onboarded) return const OnboardingScreen();
+        if (!consented) return const ConsentScreen();
+        return const HomeScreen();
       },
     );
   }

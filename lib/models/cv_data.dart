@@ -45,13 +45,6 @@ extension LanguageExtension on Language {
 
 enum TemplateName { european, modern, classic, minimal, sidebar, executive }
 
-extension TemplateNamePro on TemplateName {
-  bool get isPremium =>
-      this == TemplateName.minimal ||
-      this == TemplateName.sidebar ||
-      this == TemplateName.executive;
-}
-
 enum SectionType {
   personalInfo,
   profile,

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_ce_flutter/hive_flutter.dart';
 import '../i18n/app_localizations.dart';
-import 'home_screen.dart';
+import 'consent_screen.dart';
 
 const _kSettingsBox = 'settings';
 const _kOnboardingDone = 'onboarding_done';
@@ -69,7 +69,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
     if (!mounted) return;
     Navigator.of(context).pushReplacement(
       PageRouteBuilder(
-        pageBuilder: (_, _, _) => const HomeScreen(),
+        pageBuilder: (_, _, _) => const ConsentScreen(),
         transitionsBuilder: (_, anim, _, child) =>
             FadeTransition(opacity: anim, child: child),
         transitionDuration: const Duration(milliseconds: 500),

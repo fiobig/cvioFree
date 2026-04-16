@@ -7,13 +7,11 @@ import 'package:file_saver/file_saver.dart';
 import 'dart:io';
 import '../models/cv_data.dart';
 import '../state/cv_provider.dart';
-import '../state/pro_provider.dart';
 import '../i18n/app_localizations.dart';
 import '../services/pdf_service.dart';
 import '../services/zip_service.dart';
 import '../services/ensure_translations.dart';
 import '../services/translation_service.dart';
-import '../screens/pro_screen.dart';
 
 class DownloadBottomSheet extends ConsumerStatefulWidget {
   const DownloadBottomSheet({super.key});
@@ -185,66 +183,7 @@ class _DownloadBottomSheetState extends ConsumerState<DownloadBottomSheet>
   @override
   Widget build(BuildContext context) {
     final l = ref.watch(appLocalizationsProvider);
-    final isPro = ref.watch(proProvider);
-    final cv = ref.watch(cvProvider);
     final isAndroid = Platform.isAndroid;
-
-    // Block download for premium templates without Pro
-    if (cv.template.isPremium && !isPro) {
-      return SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(24),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Container(
-                width: 64,
-                height: 64,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  gradient: const LinearGradient(
-                    colors: [Color(0xFFF59E0B), Color(0xFFF97316)],
-                  ),
-                ),
-                child: const Icon(Icons.lock_outlined, size: 32, color: Colors.white),
-              ),
-              const SizedBox(height: 16),
-              Text(
-                l.t('proRequired'),
-                style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(height: 8),
-              Text(
-                l.t('proRequiredDesc'),
-                style: TextStyle(fontSize: 13, color: Colors.grey.shade600),
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(height: 20),
-              SizedBox(
-                width: double.infinity,
-                child: FilledButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                    Navigator.push(context, MaterialPageRoute(builder: (_) => const ProScreen()));
-                  },
-                  style: FilledButton.styleFrom(
-                    backgroundColor: const Color(0xFFF59E0B),
-                    foregroundColor: const Color(0xFF0F172A),
-                  ),
-                  child: Text(l.t('proUnlock')),
-                ),
-              ),
-              const SizedBox(height: 8),
-              OutlinedButton(
-                onPressed: () => Navigator.pop(context),
-                child: Text(l.t('cancel')),
-              ),
-            ],
-          ),
-        ),
-      );
-    }
 
     return SafeArea(
       child: Padding(
@@ -306,7 +245,6 @@ class _DownloadBottomSheetState extends ConsumerState<DownloadBottomSheet>
               ] else ...[
                 // ── PDF ──────────────────────────────────────────────────
                 if (isAndroid) ...[
-                  // Android: due pulsanti affiancati
                   Row(
                     children: [
                       Expanded(
@@ -333,7 +271,6 @@ class _DownloadBottomSheetState extends ConsumerState<DownloadBottomSheet>
                     style: TextStyle(fontSize: 11, color: Colors.grey.shade500),
                   ),
                 ] else ...[
-                  // iOS: pulsante singolo con share sheet
                   FilledButton.icon(
                     onPressed: _sharePdf,
                     icon: const Icon(Icons.picture_as_pdf_outlined),

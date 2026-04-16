@@ -1,6 +1,22 @@
+import 'dart:ui' as ui;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/cv_data.dart';
 import '../services/persistence_service.dart';
+
+/// Returns the CV language matching the device locale.
+/// Italian for 'it', Spanish for 'es'/'ca' (Catalan), English for everything else.
+Language _deviceLanguage() {
+  final locale = ui.PlatformDispatcher.instance.locale;
+  switch (locale.languageCode) {
+    case 'it':
+      return Language.it;
+    case 'es':
+    case 'ca':
+      return Language.es;
+    default:
+      return Language.en;
+  }
+}
 
 class CVNotifier extends StateNotifier<CVData> {
   CVNotifier(this._persistence) : super(kEmptyCV()) {
@@ -13,6 +29,9 @@ class CVNotifier extends StateNotifier<CVData> {
     final saved = await _persistence.load();
     if (saved != null) {
       state = _migrate(saved);
+    } else {
+      // First launch: set language based on device locale
+      state = state.copyWith(currentLanguage: _deviceLanguage());
     }
   }
 
@@ -181,6 +200,6 @@ class CVNotifier extends StateNotifier<CVData> {
 
   Future<void> clearData() async {
     await _persistence.clear();
-    state = kEmptyCV();
+    state = kEmptyCV().copyWith(currentLanguage: _deviceLanguage());
   }
 }

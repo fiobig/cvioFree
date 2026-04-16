@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/cv_data.dart';
 import '../state/cv_provider.dart';
-import '../state/pro_provider.dart';
 import '../i18n/app_localizations.dart';
 
 class TemplateSelector extends ConsumerWidget {
@@ -11,7 +10,6 @@ class TemplateSelector extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final current = ref.watch(templateProvider);
-    final isPro = ref.watch(proProvider);
     final l = ref.watch(appLocalizationsProvider);
 
     final templates = [
@@ -28,8 +26,6 @@ class TemplateSelector extends ConsumerWidget {
       children: templates.map((t) {
         final (name, key, descKey, icon, color) = t;
         final selected = current == name;
-        final premium = name.isPremium;
-        final locked = premium && !isPro;
 
         return GestureDetector(
           onTap: () => ref.read(cvProvider.notifier).setTemplate(name),
@@ -61,40 +57,13 @@ class TemplateSelector extends ConsumerWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Row(
-                        children: [
-                          Flexible(
-                            child: Text(
-                              l.t(key),
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w600,
-                                color: selected ? color : Colors.black87,
-                              ),
-                            ),
-                          ),
-                          if (locked) ...[
-                            const SizedBox(width: 6),
-                            Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                              decoration: BoxDecoration(
-                                gradient: const LinearGradient(
-                                  colors: [Color(0xFFF59E0B), Color(0xFFF97316)],
-                                ),
-                                borderRadius: BorderRadius.circular(4),
-                              ),
-                              child: const Text(
-                                'PRO',
-                                style: TextStyle(
-                                  fontSize: 9,
-                                  fontWeight: FontWeight.w800,
-                                  color: Colors.white,
-                                  letterSpacing: 0.5,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ],
+                      Text(
+                        l.t(key),
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                          color: selected ? color : Colors.black87,
+                        ),
                       ),
                       const SizedBox(height: 2),
                       Text(
