@@ -42,11 +42,13 @@ class SettingsScreen extends ConsumerWidget {
               icon: Icons.privacy_tip_outlined,
               label: l.t('privacyPolicy'),
               url: _privacyPolicyUrl,
+              lang: l.locale.name,
             ),
             _LegalTile(
               icon: Icons.description_outlined,
               label: l.t('termsOfService'),
               url: _termsOfServiceUrl,
+              lang: l.locale.name,
             ),
             const SizedBox(height: 24),
             const Divider(),
@@ -96,20 +98,32 @@ class SettingsScreen extends ConsumerWidget {
 // ── Legal tile ────────────────────────────────────────────────────────────────
 
 class _LegalTile extends StatelessWidget {
-  const _LegalTile({required this.icon, required this.label, required this.url});
+  const _LegalTile({
+    required this.icon,
+    required this.label,
+    required this.url,
+    required this.lang,
+  });
   final IconData icon;
   final String label;
   final String url;
+  final String lang;
 
   @override
   Widget build(BuildContext context) {
+    final uri = Uri.parse(url).replace(
+      queryParameters: {
+        ...Uri.parse(url).queryParameters,
+        'lang': lang,
+      },
+    );
     return ListTile(
       dense: true,
       contentPadding: EdgeInsets.zero,
       leading: Icon(icon, size: 20, color: Colors.grey.shade700),
       title: Text(label, style: const TextStyle(fontSize: 14)),
       trailing: Icon(Icons.open_in_new, size: 16, color: Colors.grey.shade400),
-      onTap: () => launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication),
+      onTap: () => launchUrl(uri, mode: LaunchMode.externalApplication),
     );
   }
 }

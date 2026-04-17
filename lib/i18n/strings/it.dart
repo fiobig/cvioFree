@@ -1,3 +1,97 @@
+const _tosBody = '''Termini di Servizio
+Ultimo aggiornamento: 16 aprile 2026
+
+I presenti Termini di Servizio ("Termini") regolano l'utilizzo dell'applicazione Cvío ("l'App"), sviluppata e gestita da Fiorenzo ("noi", "ci"). Utilizzando l'App, l'utente accetta i presenti Termini.
+
+1. Descrizione del servizio
+Cvío e un'applicazione gratuita che consente di creare curriculum vitae professionali in formato PDF. L'App offre diversi template, la possibilita di compilare il CV in piu sezioni e una funzione di traduzione automatica.
+
+2. Utilizzo dell'App
+L'utente si impegna a:
+- Utilizzare l'App in conformita con le leggi applicabili.
+- Inserire dati veritieri e di cui detiene i diritti.
+- Non utilizzare l'App per scopi illeciti o fraudolenti.
+
+3. Proprieta intellettuale
+L'App, il suo codice sorgente, i template e il design sono di proprieta di Fiorenzo. L'utente mantiene la piena proprieta dei contenuti (testi e immagini) inseriti nel proprio CV.
+
+4. Servizi di terze parti
+L'App utilizza il servizio di traduzione MyMemory, fornito da Translated srl. L'utilizzo della funzione di traduzione e soggetto ai Termini e Condizioni di MyMemory (mymemory.translated.net/terms-and-conditions). Non garantiamo la correttezza, completezza o disponibilita delle traduzioni fornite da questo servizio.
+
+5. Esclusione di garanzia
+L'App e fornita "cosi com'e" senza garanzie di alcun tipo, esplicite o implicite. In particolare:
+- Non garantiamo che l'App sia priva di errori o interruzioni.
+- Non garantiamo la qualita o l'accuratezza delle traduzioni automatiche.
+- Non siamo responsabili per eventuali perdite di dati dovute a malfunzionamenti del dispositivo o dell'App.
+
+6. Limitazione di responsabilita
+Nella misura massima consentita dalla legge, non saremo responsabili per danni diretti, indiretti, incidentali o consequenziali derivanti dall'uso o dall'impossibilita di utilizzare l'App, inclusi ma non limitati a perdita di dati, mancata assunzione o qualsiasi altra perdita.
+
+7. Gratuita del servizio
+L'App e completamente gratuita. Non sono previsti acquisti in-app, abbonamenti o funzionalita a pagamento. Ci riserviamo il diritto di modificare questo aspetto in futuro con adeguato preavviso.
+
+8. Modifiche ai Termini
+Ci riserviamo il diritto di modificare i presenti Termini in qualsiasi momento. Le modifiche saranno pubblicate su questa pagina con la data di aggiornamento. L'uso continuato dell'App dopo la pubblicazione delle modifiche costituisce accettazione dei nuovi Termini.
+
+9. Legge applicabile
+I presenti Termini sono regolati dalla legge italiana. Per qualsiasi controversia sara competente il foro del luogo di residenza dell'utente consumatore, ai sensi del Codice del Consumo.
+
+10. Contatti
+Per domande relative ai presenti Termini, contattare: fiorenzo9845@gmail.com''';
+
+const _privacyBody = '''Informativa sulla Privacy
+Ultimo aggiornamento: 16 aprile 2026
+
+La presente informativa descrive come l'applicazione Cvío ("l'App") tratta i dati dell'utente. L'App e sviluppata e gestita da Fiorenzo ("noi", "ci").
+
+1. Dati raccolti
+L'App consente di creare un curriculum vitae (CV) inserendo dati personali e professionali quali nome, cognome, email, telefono, indirizzo, esperienze lavorative, istruzione, competenze e altri campi del CV.
+
+Tutti questi dati sono salvati esclusivamente in locale sul dispositivo dell'utente. Non disponiamo di server che raccolgono o memorizzano i dati del CV. Non creiamo account utente e non richiediamo registrazione.
+
+2. Servizio di traduzione (MyMemory)
+L'App offre una funzione di traduzione automatica del CV in piu lingue. Quando l'utente utilizza questa funzione, il testo del CV viene inviato al servizio di traduzione MyMemory, fornito da Translated srl (mymemory.translated.net).
+
+L'invio dei dati a MyMemory avviene in due casi:
+
+- Cambio lingua nell'anteprima: quando l'utente cambia la lingua di visualizzazione del CV all'interno dell'App, i testi vengono tradotti in tempo reale tramite MyMemory.
+
+- Download ZIP multilingua: quando l'utente scarica il pacchetto ZIP contenente il CV tradotto in tutte le lingue, i testi vengono inviati a MyMemory per la traduzione.
+
+Utilizzando queste funzioni, l'utente accetta che:
+- Il testo del CV (inclusi dati personali come nome, cognome, esperienze lavorative, ecc.) viene trasmesso ai server di MyMemory per l'elaborazione della traduzione.
+- MyMemory puo memorizzare i segmenti di testo inviati, secondo i propri Termini e Condizioni.
+- Noi non abbiamo controllo sul trattamento dei dati effettuato da MyMemory.
+
+Se l'utente non desidera che il testo del CV venga inviato a servizi esterni, puo utilizzare l'App scaricando il PDF nella lingua corrente senza cambiare lingua e senza utilizzare il download ZIP multilingua.
+
+3. Generazione PDF
+La generazione del documento PDF avviene interamente in locale sul dispositivo. Nessun dato viene trasmesso a server esterni durante questo processo.
+
+4. Dati di archiviazione locale
+L'App utilizza lo storage locale del dispositivo per salvare:
+- I dati del CV inseriti dall'utente.
+- Le preferenze dell'App (es. completamento dell'onboarding).
+
+Questi dati restano sul dispositivo e possono essere cancellati dall'utente in qualsiasi momento tramite la funzione "Cancella Dati" nelle impostazioni dell'App, oppure disinstallando l'App.
+
+5. Dati NON raccolti
+L'App:
+- Non raccoglie dati analitici o di utilizzo.
+- Non utilizza cookie di tracciamento.
+- Non mostra pubblicita.
+- Non richiede la creazione di un account.
+- Non condivide dati con terze parti, ad eccezione del servizio di traduzione descritto al punto 2.
+
+6. Diritti dell'utente
+Poiche i dati sono salvati esclusivamente sul dispositivo dell'utente, quest'ultimo ha pieno controllo sui propri dati e puo cancellarli in qualsiasi momento. Non essendoci dati memorizzati su nostri server, non e necessaria alcuna richiesta di cancellazione a noi.
+
+7. Modifiche alla Privacy Policy
+Eventuali modifiche a questa informativa saranno pubblicate su questa pagina con la data di aggiornamento. L'uso continuato dell'App dopo la pubblicazione delle modifiche costituisce accettazione delle stesse.
+
+8. Contatti
+Per domande relative a questa informativa, contattare: fiorenzo9845@gmail.com''';
+
 const Map<String, String> itStrings = {
   'appTitle': 'Cvío',
   'appSubtitle': 'Crea il tuo curriculum vitae professionale',
@@ -121,4 +215,6 @@ const Map<String, String> itStrings = {
   'consentAccept': 'Accetto',
   'consentAcceptAndStart': 'Accetta e inizia a usare l\'app',
   'consentScrollHint': 'Scorri fino in fondo per continuare',
+  'tosBody': _tosBody,
+  'privacyBody': _privacyBody,
 };

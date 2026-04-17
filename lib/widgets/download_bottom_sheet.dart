@@ -96,7 +96,7 @@ class _DownloadBottomSheetState extends ConsumerState<DownloadBottomSheet>
       await FileSaver.instance.saveAs(
         name: '${name}_CV',
         bytes: bytes,
-        ext: 'pdf',
+        fileExtension: 'pdf',
         mimeType: MimeType.pdf,
       );
       _showSuccess();
@@ -146,7 +146,7 @@ class _DownloadBottomSheetState extends ConsumerState<DownloadBottomSheet>
       await FileSaver.instance.saveAs(
         name: '${name}_CV',
         bytes: zipBytes,
-        ext: 'zip',
+        fileExtension: 'zip',
         mimeType: MimeType.other,
       );
       _showSuccess();

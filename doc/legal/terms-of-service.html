@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Termini di Servizio - Cvío</title>
+  <title>Terms of Service - Cvío</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #1e293b; max-width: 720px; margin: 0 auto; padding: 24px 16px; }
@@ -13,54 +13,188 @@
     ul { padding-left: 20px; }
     .date { font-size: 0.85rem; color: #64748b; margin-bottom: 24px; }
     a { color: #2563eb; }
+    .lang-switcher { display: flex; gap: 8px; margin-bottom: 20px; font-size: 0.85rem; }
+    .lang-switcher button { background: none; border: 1px solid #cbd5e1; color: #475569; padding: 4px 10px; border-radius: 6px; cursor: pointer; font: inherit; }
+    .lang-switcher button.active { background: #2563eb; color: white; border-color: #2563eb; }
+    [data-lang] { display: none; }
+    [data-lang].active { display: block; }
   </style>
 </head>
 <body>
 
-<h1>Termini di Servizio</h1>
-<p class="date">Ultimo aggiornamento: 16 aprile 2026</p>
+<div class="lang-switcher">
+  <button data-switch="it" type="button">Italiano</button>
+  <button data-switch="en" type="button">English</button>
+  <button data-switch="es" type="button">Español</button>
+</div>
 
-<p>I presenti Termini di Servizio ("Termini") regolano l'utilizzo dell'applicazione <strong>Cvío</strong> ("l'App"), sviluppata e gestita da Fiorenzo ("noi", "ci"). Utilizzando l'App, l'utente accetta i presenti Termini.</p>
+<section data-lang="it">
+  <h1>Termini di Servizio</h1>
+  <p class="date">Ultimo aggiornamento: 16 aprile 2026</p>
 
-<h2>1. Descrizione del servizio</h2>
-<p>Cvío e un'applicazione gratuita che consente di creare curriculum vitae professionali in formato PDF. L'App offre diversi template, la possibilita di compilare il CV in piu sezioni e una funzione di traduzione automatica.</p>
+  <p>I presenti Termini di Servizio ("Termini") regolano l'utilizzo dell'applicazione <strong>Cvío</strong> ("l'App"), sviluppata e gestita da Fiorenzo ("noi", "ci"). Utilizzando l'App, l'utente accetta i presenti Termini.</p>
 
-<h2>2. Utilizzo dell'App</h2>
-<p>L'utente si impegna a:</p>
-<ul>
-  <li>Utilizzare l'App in conformita con le leggi applicabili.</li>
-  <li>Inserire dati veritieri e di cui detiene i diritti.</li>
-  <li>Non utilizzare l'App per scopi illeciti o fraudolenti.</li>
-</ul>
+  <h2>1. Descrizione del servizio</h2>
+  <p>Cvío e un'applicazione gratuita che consente di creare curriculum vitae professionali in formato PDF. L'App offre diversi template, la possibilita di compilare il CV in piu sezioni e una funzione di traduzione automatica.</p>
 
-<h2>3. Proprieta intellettuale</h2>
-<p>L'App, il suo codice sorgente, i template e il design sono di proprieta di Fiorenzo. L'utente mantiene la piena proprieta dei contenuti (testi e immagini) inseriti nel proprio CV.</p>
+  <h2>2. Utilizzo dell'App</h2>
+  <p>L'utente si impegna a:</p>
+  <ul>
+    <li>Utilizzare l'App in conformita con le leggi applicabili.</li>
+    <li>Inserire dati veritieri e di cui detiene i diritti.</li>
+    <li>Non utilizzare l'App per scopi illeciti o fraudolenti.</li>
+  </ul>
 
-<h2>4. Servizi di terze parti</h2>
-<p>L'App utilizza il servizio di traduzione MyMemory, fornito da Translated srl. L'utilizzo della funzione di traduzione e soggetto ai <a href="https://mymemory.translated.net/terms-and-conditions">Termini e Condizioni di MyMemory</a>. Non garantiamo la correttezza, completezza o disponibilita delle traduzioni fornite da questo servizio.</p>
+  <h2>3. Proprieta intellettuale</h2>
+  <p>L'App, il suo codice sorgente, i template e il design sono di proprieta di Fiorenzo. L'utente mantiene la piena proprieta dei contenuti (testi e immagini) inseriti nel proprio CV.</p>
 
-<h2>5. Esclusione di garanzia</h2>
-<p>L'App e fornita "cosi com'e" senza garanzie di alcun tipo, esplicite o implicite. In particolare:</p>
-<ul>
-  <li>Non garantiamo che l'App sia priva di errori o interruzioni.</li>
-  <li>Non garantiamo la qualita o l'accuratezza delle traduzioni automatiche.</li>
-  <li>Non siamo responsabili per eventuali perdite di dati dovute a malfunzionamenti del dispositivo o dell'App.</li>
-</ul>
+  <h2>4. Servizi di terze parti</h2>
+  <p>L'App utilizza il servizio di traduzione MyMemory, fornito da Translated srl. L'utilizzo della funzione di traduzione e soggetto ai <a href="https://mymemory.translated.net/terms-and-conditions">Termini e Condizioni di MyMemory</a>. Non garantiamo la correttezza, completezza o disponibilita delle traduzioni fornite da questo servizio.</p>
 
-<h2>6. Limitazione di responsabilita</h2>
-<p>Nella misura massima consentita dalla legge, non saremo responsabili per danni diretti, indiretti, incidentali o consequenziali derivanti dall'uso o dall'impossibilita di utilizzare l'App, inclusi ma non limitati a perdita di dati, mancata assunzione o qualsiasi altra perdita.</p>
+  <h2>5. Esclusione di garanzia</h2>
+  <p>L'App e fornita "cosi com'e" senza garanzie di alcun tipo, esplicite o implicite. In particolare:</p>
+  <ul>
+    <li>Non garantiamo che l'App sia priva di errori o interruzioni.</li>
+    <li>Non garantiamo la qualita o l'accuratezza delle traduzioni automatiche.</li>
+    <li>Non siamo responsabili per eventuali perdite di dati dovute a malfunzionamenti del dispositivo o dell'App.</li>
+  </ul>
 
-<h2>7. Gratuita del servizio</h2>
-<p>L'App e completamente gratuita. Non sono previsti acquisti in-app, abbonamenti o funzionalita a pagamento. Ci riserviamo il diritto di modificare questo aspetto in futuro con adeguato preavviso.</p>
+  <h2>6. Limitazione di responsabilita</h2>
+  <p>Nella misura massima consentita dalla legge, non saremo responsabili per danni diretti, indiretti, incidentali o consequenziali derivanti dall'uso o dall'impossibilita di utilizzare l'App, inclusi ma non limitati a perdita di dati, mancata assunzione o qualsiasi altra perdita.</p>
 
-<h2>8. Modifiche ai Termini</h2>
-<p>Ci riserviamo il diritto di modificare i presenti Termini in qualsiasi momento. Le modifiche saranno pubblicate su questa pagina con la data di aggiornamento. L'uso continuato dell'App dopo la pubblicazione delle modifiche costituisce accettazione dei nuovi Termini.</p>
+  <h2>7. Gratuita del servizio</h2>
+  <p>L'App e completamente gratuita. Non sono previsti acquisti in-app, abbonamenti o funzionalita a pagamento. Ci riserviamo il diritto di modificare questo aspetto in futuro con adeguato preavviso.</p>
 
-<h2>9. Legge applicabile</h2>
-<p>I presenti Termini sono regolati dalla legge italiana. Per qualsiasi controversia sara competente il foro del luogo di residenza dell'utente consumatore, ai sensi del Codice del Consumo.</p>
+  <h2>8. Modifiche ai Termini</h2>
+  <p>Ci riserviamo il diritto di modificare i presenti Termini in qualsiasi momento. Le modifiche saranno pubblicate su questa pagina con la data di aggiornamento. L'uso continuato dell'App dopo la pubblicazione delle modifiche costituisce accettazione dei nuovi Termini.</p>
 
-<h2>10. Contatti</h2>
-<p>Per domande relative ai presenti Termini, contattare: <a href="mailto:fiorenzo9845@gmail.com">fiorenzo9845@gmail.com</a></p>
+  <h2>9. Legge applicabile</h2>
+  <p>I presenti Termini sono regolati dalla legge italiana. Per qualsiasi controversia sara competente il foro del luogo di residenza dell'utente consumatore, ai sensi del Codice del Consumo.</p>
+
+  <h2>10. Contatti</h2>
+  <p>Per domande relative ai presenti Termini, contattare: <a href="mailto:fiorenzo9845@gmail.com">fiorenzo9845@gmail.com</a></p>
+</section>
+
+<section data-lang="en">
+  <h1>Terms of Service</h1>
+  <p class="date">Last updated: April 16, 2026</p>
+
+  <p>These Terms of Service ("Terms") govern the use of the <strong>Cvío</strong> application ("the App"), developed and operated by Fiorenzo ("we", "us"). By using the App, the user accepts these Terms.</p>
+
+  <h2>1. Service description</h2>
+  <p>Cvío is a free application that lets users create professional resumes in PDF format. The App offers multiple templates, the ability to fill in the CV across several sections, and an automatic translation feature.</p>
+
+  <h2>2. Use of the App</h2>
+  <p>The user agrees to:</p>
+  <ul>
+    <li>Use the App in compliance with applicable laws.</li>
+    <li>Enter truthful data to which they hold the rights.</li>
+    <li>Not use the App for unlawful or fraudulent purposes.</li>
+  </ul>
+
+  <h2>3. Intellectual property</h2>
+  <p>The App, its source code, templates and design are the property of Fiorenzo. The user retains full ownership of the content (texts and images) entered in their CV.</p>
+
+  <h2>4. Third-party services</h2>
+  <p>The App uses the MyMemory translation service, provided by Translated srl. Use of the translation feature is subject to <a href="https://mymemory.translated.net/terms-and-conditions">MyMemory's Terms and Conditions</a>. We do not guarantee the correctness, completeness or availability of the translations provided by this service.</p>
+
+  <h2>5. Disclaimer of warranties</h2>
+  <p>The App is provided "as is" without warranties of any kind, express or implied. In particular:</p>
+  <ul>
+    <li>We do not guarantee that the App will be free of errors or interruptions.</li>
+    <li>We do not guarantee the quality or accuracy of automatic translations.</li>
+    <li>We are not responsible for any data loss caused by device or App malfunction.</li>
+  </ul>
+
+  <h2>6. Limitation of liability</h2>
+  <p>To the maximum extent permitted by law, we shall not be liable for any direct, indirect, incidental or consequential damages arising from the use or inability to use the App, including but not limited to data loss, failure to obtain employment or any other loss.</p>
+
+  <h2>7. Free service</h2>
+  <p>The App is completely free. There are no in-app purchases, subscriptions or paid features. We reserve the right to change this in the future with appropriate prior notice.</p>
+
+  <h2>8. Changes to the Terms</h2>
+  <p>We reserve the right to modify these Terms at any time. Changes will be published on this page together with the update date. Continued use of the App after the publication of changes constitutes acceptance of the new Terms.</p>
+
+  <h2>9. Applicable law</h2>
+  <p>These Terms are governed by Italian law. For any dispute, the court of the consumer user's place of residence shall have jurisdiction, in accordance with the Italian Consumer Code.</p>
+
+  <h2>10. Contact</h2>
+  <p>For questions regarding these Terms, contact: <a href="mailto:fiorenzo9845@gmail.com">fiorenzo9845@gmail.com</a></p>
+</section>
+
+<section data-lang="es">
+  <h1>Términos de Servicio</h1>
+  <p class="date">Última actualización: 16 de abril de 2026</p>
+
+  <p>Los presentes Términos de Servicio ("Términos") regulan el uso de la aplicación <strong>Cvío</strong> ("la App"), desarrollada y gestionada por Fiorenzo ("nosotros"). Al utilizar la App, el usuario acepta los presentes Términos.</p>
+
+  <h2>1. Descripción del servicio</h2>
+  <p>Cvío es una aplicación gratuita que permite crear currículums vítae profesionales en formato PDF. La App ofrece varias plantillas, la posibilidad de rellenar el CV en varias secciones y una función de traducción automática.</p>
+
+  <h2>2. Uso de la App</h2>
+  <p>El usuario se compromete a:</p>
+  <ul>
+    <li>Utilizar la App conforme a las leyes aplicables.</li>
+    <li>Introducir datos veraces y sobre los que ostenta los derechos.</li>
+    <li>No utilizar la App con fines ilícitos o fraudulentos.</li>
+  </ul>
+
+  <h2>3. Propiedad intelectual</h2>
+  <p>La App, su código fuente, las plantillas y el diseño son propiedad de Fiorenzo. El usuario conserva la plena propiedad de los contenidos (textos e imágenes) introducidos en su CV.</p>
+
+  <h2>4. Servicios de terceros</h2>
+  <p>La App utiliza el servicio de traducción MyMemory, proporcionado por Translated srl. El uso de la función de traducción está sujeto a los <a href="https://mymemory.translated.net/terms-and-conditions">Términos y Condiciones de MyMemory</a>. No garantizamos la corrección, integridad o disponibilidad de las traducciones proporcionadas por este servicio.</p>
+
+  <h2>5. Exclusión de garantías</h2>
+  <p>La App se proporciona "tal cual", sin garantías de ningún tipo, explícitas o implícitas. En particular:</p>
+  <ul>
+    <li>No garantizamos que la App esté libre de errores o interrupciones.</li>
+    <li>No garantizamos la calidad o exactitud de las traducciones automáticas.</li>
+    <li>No somos responsables de eventuales pérdidas de datos debidas a fallos del dispositivo o de la App.</li>
+  </ul>
+
+  <h2>6. Limitación de responsabilidad</h2>
+  <p>En la máxima medida permitida por la ley, no seremos responsables de daños directos, indirectos, incidentales o consecuentes derivados del uso o la imposibilidad de uso de la App, incluidos, entre otros, la pérdida de datos, la falta de contratación laboral o cualquier otra pérdida.</p>
+
+  <h2>7. Gratuidad del servicio</h2>
+  <p>La App es completamente gratuita. No existen compras dentro de la aplicación, suscripciones ni funciones de pago. Nos reservamos el derecho a modificar este aspecto en el futuro con un aviso adecuado.</p>
+
+  <h2>8. Modificaciones de los Términos</h2>
+  <p>Nos reservamos el derecho a modificar los presentes Términos en cualquier momento. Las modificaciones se publicarán en esta página con la fecha de actualización. El uso continuado de la App tras la publicación de las modificaciones constituye aceptación de los nuevos Términos.</p>
+
+  <h2>9. Ley aplicable</h2>
+  <p>Los presentes Términos se rigen por la ley italiana. Para cualquier controversia será competente el foro del lugar de residencia del usuario consumidor, conforme al Código del Consumo italiano.</p>
+
+  <h2>10. Contacto</h2>
+  <p>Para cuestiones relativas a los presentes Términos, contactar: <a href="mailto:fiorenzo9845@gmail.com">fiorenzo9845@gmail.com</a></p>
+</section>
+
+<script>
+(function () {
+  var SUPPORTED = ['it', 'en', 'es'];
+  var params = new URLSearchParams(window.location.search);
+  var requested = (params.get('lang') || navigator.language || 'it').slice(0, 2).toLowerCase();
+  var lang = SUPPORTED.indexOf(requested) !== -1 ? requested : 'it';
+
+  function apply(code) {
+    document.documentElement.lang = code;
+    document.querySelectorAll('[data-lang]').forEach(function (el) {
+      el.classList.toggle('active', el.getAttribute('data-lang') === code);
+    });
+    document.querySelectorAll('.lang-switcher button').forEach(function (btn) {
+      btn.classList.toggle('active', btn.getAttribute('data-switch') === code);
+    });
+  }
+
+  document.querySelectorAll('.lang-switcher button').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      apply(btn.getAttribute('data-switch'));
+    });
+  });
+
+  apply(lang);
+})();
+</script>
 
 </body>
 </html>
