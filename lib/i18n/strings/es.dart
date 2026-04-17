@@ -37,7 +37,7 @@ Nos reservamos el derecho a modificar los presentes Términos en cualquier momen
 Los presentes Términos se rigen por la ley italiana. Para cualquier controversia será competente el foro del lugar de residencia del usuario consumidor, conforme al Código del Consumo italiano.
 
 10. Contacto
-Para cuestiones relativas a los presentes Términos, contactar: fiorenzo9845@gmail.com''';
+Para cuestiones relativas a los presentes Términos, contactar: cviomobilesupport@gmail.com''';
 
 const _privacyBody = '''Política de Privacidad
 Última actualización: 16 de abril de 2026
@@ -90,7 +90,7 @@ Dado que los datos se guardan exclusivamente en el dispositivo del usuario, este
 Cualquier modificación de esta política se publicará en esta página con la fecha de actualización. El uso continuado de la App tras la publicación de las modificaciones constituye aceptación de las mismas.
 
 8. Contacto
-Para cuestiones relativas a esta política, contactar: fiorenzo9845@gmail.com''';
+Para cuestiones relativas a esta política, contactar: cviomobilesupport@gmail.com''';
 
 const Map<String, String> esStrings = {
   'appTitle': 'Cvío',

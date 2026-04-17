@@ -37,7 +37,7 @@ We reserve the right to modify these Terms at any time. Changes will be publishe
 These Terms are governed by Italian law. For any dispute, the court of the consumer user's place of residence shall have jurisdiction, in accordance with the Italian Consumer Code.
 
 10. Contact
-For questions regarding these Terms, contact: fiorenzo9845@gmail.com''';
+For questions regarding these Terms, contact: cviomobilesupport@gmail.com''';
 
 const _privacyBody = '''Privacy Policy
 Last updated: April 16, 2026
@@ -90,7 +90,7 @@ Since data is stored exclusively on the user's device, the user has full control
 Any changes to this policy will be published on this page together with the update date. Continued use of the App after the publication of changes constitutes acceptance of such changes.
 
 8. Contact
-For questions regarding this policy, contact: fiorenzo9845@gmail.com''';
+For questions regarding this policy, contact: cviomobilesupport@gmail.com''';
 
 const Map<String, String> enStrings = {
   'appTitle': 'Cvío',

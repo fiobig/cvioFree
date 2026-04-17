@@ -37,7 +37,7 @@ Ci riserviamo il diritto di modificare i presenti Termini in qualsiasi momento. 
 I presenti Termini sono regolati dalla legge italiana. Per qualsiasi controversia sara competente il foro del luogo di residenza dell'utente consumatore, ai sensi del Codice del Consumo.
 
 10. Contatti
-Per domande relative ai presenti Termini, contattare: fiorenzo9845@gmail.com''';
+Per domande relative ai presenti Termini, contattare: cviomobilesupport@gmail.com''';
 
 const _privacyBody = '''Informativa sulla Privacy
 Ultimo aggiornamento: 16 aprile 2026
@@ -90,7 +90,7 @@ Poiche i dati sono salvati esclusivamente sul dispositivo dell'utente, quest'ult
 Eventuali modifiche a questa informativa saranno pubblicate su questa pagina con la data di aggiornamento. L'uso continuato dell'App dopo la pubblicazione delle modifiche costituisce accettazione delle stesse.
 
 8. Contatti
-Per domande relative a questa informativa, contattare: fiorenzo9845@gmail.com''';
+Per domande relative a questa informativa, contattare: cviomobilesupport@gmail.com''';
 
 const Map<String, String> itStrings = {
   'appTitle': 'Cvío',
