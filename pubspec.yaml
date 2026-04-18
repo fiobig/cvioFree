@@ -1,7 +1,7 @@
 name: cv_mobile_app
 description: "CV Builder mobile app"
 publish_to: 'none'
-version: 1.0.0+1
+version: 0.0.1+1
 
 environment:
   sdk: ^3.12.0-320.0.dev
